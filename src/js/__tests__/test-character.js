@@ -13,12 +13,12 @@ test('get stoned', () => {
 test('get attack without stoned', () => {
   const result = new Character();
   result.attack = 100;
-  expect(result.attackPower).toBe(90);
+  expect(result.attack).toBe(90);
 });
 
 test('get attack with stoned', () => {
   const result = new Character();
   result.stoned = true;
   result.attack = 100;
-  expect(result.attackPower).toBe(85);
+  expect(result.attack).toBe(85);
 });
