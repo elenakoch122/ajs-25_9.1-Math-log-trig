@@ -4,14 +4,21 @@ test('create an instance of Character', () => {
   expect(new Character()).toBeInstanceOf(Character);
 });
 
-test('get attack', () => {
+test('get stoned', () => {
   const result = new Character();
-  result.attack = 2;
+  result.stoned = true;
+  expect(result.isStoned).toBe(true);
+});
+
+test('get attack without stoned', () => {
+  const result = new Character();
+  result.attack = 100;
   expect(result.attackPower).toBe(90);
 });
 
-test('get stoned', () => {
+test('get attack with stoned', () => {
   const result = new Character();
-  result.stoned = 2;
+  result.stoned = true;
+  result.attack = 100;
   expect(result.attackPower).toBe(85);
 });

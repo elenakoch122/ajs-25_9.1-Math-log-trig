@@ -1,23 +1,25 @@
 export default class Character {
   constructor() {
-    this.attackPower = 100;
-    this.defence = 40;
+    this.distance = 2;
   }
 
-  set attack(distance) {
-    this.attackPower *= (1 - (distance - 1) / 10);
-  }
-
-  get attack() {
-    return this.attackPower;
-  }
-
-  set stoned(distance) {
-    this.attack = distance;
-    this.attackPower = this.attack - Math.round(Math.log2(distance)) * 5;
+  set stoned(value) {
+    this.isStoned = value;
   }
 
   get stoned() {
+    return this.isStoned;
+  }
+
+  set attack(value) {
+    this.attackPower = value;
+    this.attackPower *= (1 - (this.distance - 1) / 10);
+    if (this.stoned) {
+      this.attackPower -= Math.round(Math.log2(this.distance)) * 5;
+    }
+  }
+
+  get attack() {
     return this.attackPower;
   }
 }

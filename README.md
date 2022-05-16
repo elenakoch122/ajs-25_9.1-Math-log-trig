@@ -1,5 +1,7 @@
 # ДЗ к лекции ArrayBuffer - Math (log/trig)
 
+[![Build status](https://ci.appveyor.com/api/projects/status/dhm9g245tdf9g36f?svg=true)](https://ci.appveyor.com/project/elenakoch122/ajs-25-9-1-math-log-trig)
+
 ### Легенда
 
 Мощь атаки магов и демонов привела к разбалансировке игрового мира. Поэтому вы ввели для игроков несколько новых правил и возможностей:
