@@ -4,12 +4,6 @@ test('create an instance of Character', () => {
   expect(new Character()).toBeInstanceOf(Character);
 });
 
-test('get stoned', () => {
-  const result = new Character();
-  result.stoned = true;
-  expect(result.isStoned).toBe(true);
-});
-
 test('get attack without stoned', () => {
   const result = new Character();
   result.attack = 100;
